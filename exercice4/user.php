@@ -19,8 +19,8 @@
             <div class="card">    
                 <div class="card-body text-center">
                     <h5 class="card-title mb-3">Rappel de vos informations</h5>
-                    <p class="card-text"><b>Email</b> : <?=$_POST['lastname'];?></p>
-                    <p class="card-text"><b>Message</b> : <?=$_POST['firstname'];?></p>
+                    <p class="card-text"><b>lastname</b> : <?=$_POST['lastname'];?></p>
+                    <p class="card-text"><b>firstname</b> : <?=$_POST['firstname'];?></p>
                 </div>
             </div>
         </div>

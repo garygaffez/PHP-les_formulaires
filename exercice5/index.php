@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -23,14 +24,20 @@
                     <div class="mb-3">
                         <label for="lastname" class="form-label">lastname</label>
                         <input type="text" class="form-control" name="lastname">
-                        <?=$_POST['lastname'];?>
+                        
                     </div>
                     <div class="mb-3">
                         <label for="firstname" class="form-label">firstname</label>
                         <input type="text" class="form-control" name="firstname">
+                        
                     </div>
-                    <button type="submit" class="btn btn-warning">Envoyer</button> 
+                    <button type="submit" class="btn btn-warning">Envoyer</button>                  
                 </form>
+
+                <div class="text-white">
+                    <?=$_POST['lastname'];?>
+                    <?=$_POST['firstname'];?>
+                </div>
             </div>
         </div>
     </div>
