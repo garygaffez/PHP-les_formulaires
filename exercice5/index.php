@@ -34,10 +34,10 @@
                     <button type="submit" class="btn btn-warning">Envoyer</button>                  
                 </form>
 
-                <div class="text-white">
+                <!-- <div class="text-white">
                     <?=$_POST['lastname'];?>
                     <?=$_POST['firstname'];?>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

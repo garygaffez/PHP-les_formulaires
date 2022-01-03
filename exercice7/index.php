@@ -1,4 +1,13 @@
+<?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // var_dump($_FILES);
+        $lastname = htmlspecialchars($_POST['lastname']);
+        $firstname = htmlspecialchars($_POST['firstname']);
+        $civilGender = htmlspecialchars($_POST['civilGender']);
+        $files = htmlspecialchars($_FILES['files']['name']);
+    }
 
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -18,8 +27,10 @@
             <div class="text-warning text-center fs-3 p-5">
 
             <?php
-                if ((isset($_POST['civilGender'])) || (isset($_POST['firstname'])) || (isset($_POST['lastname']))) { ?>
-                    <?='Je suis '.$_POST['civilGender'].' '.$_POST['firstname'].' '.$_POST['lastname'];?>
+            // var_dump($_SERVER["REQUEST_METHOD"]);
+                if ($_SERVER["REQUEST_METHOD"] == "POST") { ?>
+                    <?='Je suis '.$civilGender.' '.$firstname.' '.$lastname;?>
+                
                 
                 <?php
                 } if (isset($_FILES['files']) && $_FILES['files']['error'] == 0) {
@@ -66,7 +77,7 @@
                             <input type="file" class="form-control" id="customFile" name="files"/>
                         </div>
             
-                        <button type="submit" class="btn btn-warning mt-5" name="envoi">Envoyer</button> 
+                        <button type="submit" class="btn btn-warning mt-5">Envoyer</button> 
                     </form>
 
                 <?php

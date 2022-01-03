@@ -1,3 +1,8 @@
+<?php
+    $var1 = $_GET['lastname'];
+    $var2 = $_GET['firstname'];
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -18,8 +23,8 @@
             <div class="card">    
                 <div class="card-body text-center">
                     <h5 class="card-title mb-3">Rappel de vos informations</h5>
-                    <p class="card-text"><b>Email</b> : <?php echo $_GET['lastname']; ?></p>
-                    <p class="card-text"><b>Message</b> : <?php echo $_GET['firstname']; ?></p>
+                    <p class="card-text"><b>Nom</b> : <?=$var1;?></p>
+                    <p class="card-text"><b>Prénom</b> : <?=$var2;?></p>
                 </div>
             </div>
         </div>

@@ -1,3 +1,8 @@
+<?php
+    $var1 = htmlspecialchars($_POST['lastname']);
+    $var2 = htmlspecialchars($_POST['firstname']);
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -19,8 +24,8 @@
             <div class="card">    
                 <div class="card-body text-center">
                     <h5 class="card-title mb-3">Rappel de vos informations</h5>
-                    <p class="card-text"><b>lastname</b> : <?=$_POST['lastname'];?></p>
-                    <p class="card-text"><b>firstname</b> : <?=$_POST['firstname'];?></p>
+                    <p class="card-text"><b>lastname</b> : <?=$var1;?></p>
+                    <p class="card-text"><b>firstname</b> : <?=$var2;?></p>
                 </div>
             </div>
         </div>

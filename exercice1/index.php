@@ -17,11 +17,11 @@
                 <form action="user.php" method="GET">
                     <div class="mb-3">
                         <label for="lastname" class="form-label">lastname</label>
-                        <input type="text" class="form-control" name="lastname">
+                        <input type="text" class="form-control" name="lastname" pattern="[a-zA-Z]+">
                     </div>
                     <div class="mb-3">
                         <label for="firstname" class="form-label">firstname</label>
-                        <input type="text" class="form-control" name="firstname">
+                        <input type="text" class="form-control" name="firstname" pattern="[a-zA-Z]+">
                     </div>
                     <button type="submit" class="btn btn-warning">Envoyer</button> 
                 </form>

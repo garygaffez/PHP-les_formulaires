@@ -1,3 +1,13 @@
+<?php
+    if (isset($_POST['lastname']) && isset($_POST['firstname']) && isset($_POST['civilGender'])) {
+        $lastname = htmlspecialchars($_POST['lastname']);
+        $firstname = htmlspecialchars($_POST['firstname']);
+        $civilGender = htmlspecialchars($_POST['civilGender']);
+    }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -16,27 +26,27 @@
             <div class="text-warning text-center fs-3 p-5">
 
             <?php
-                if ((isset($_POST['civilGender'])) || (isset($_POST['firstname'])) || (isset($_POST['lastname']))) { ?>
-                    <?='Je suis '.$_POST['civilGender'].' '.$_POST['firstname'].' '.$_POST['lastname'];?>
+                if ((isset($civilGender)) || (isset($firstname)) || (isset($lastname))) { ?>
+                    <?='Je suis '.$civilGender.' '.$firstname.' '.$lastname;?>
                 <?php
                 
                 } else { ?>
                     <form action="index.php" method="POST">                    
-                    <select class="form-select form-select-mb mb-3" name="civilGender" aria-label=".form-select-mb example">
-                        <option value=Mr>Mr</option>
-                        <option value=Mme>Mme</option>                    
-                    </select>
-                    <div class="mb-3">
-                        <label for="firstname" class="form-label">firstname</label>
-                        <input type="text" class="form-control" name="firstname">                          
-                    </div>
-                    <div class="mb-3">
-                        <label for="lastname" class="form-label">lastname</label>
-                        <input type="text" class="form-control" name="lastname">
-                    </div>
-                    
-                    <button type="submit" class="btn btn-warning" name="envoi">Envoyer</button> 
-                </form>
+                        <select class="form-select form-select-mb mb-3" name="civilGender" aria-label=".form-select-mb example">
+                            <option value=Mr>Mr</option>
+                            <option value=Mme>Mme</option>                    
+                        </select>
+                        <div class="mb-3">
+                            <label for="firstname" class="form-label">firstname</label>
+                            <input type="text" class="form-control" name="firstname">                          
+                        </div>
+                        <div class="mb-3">
+                            <label for="lastname" class="form-label">lastname</label>
+                            <input type="text" class="form-control" name="lastname">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-warning">Envoyer</button> 
+                    </form>
                 <?php
                 }
             ?>
